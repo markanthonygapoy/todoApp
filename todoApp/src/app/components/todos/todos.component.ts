@@ -6,23 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-
-  todolist:any[];
-  completedlist:any[];
+  todoItem:string;
+  todolist:any;
+  todochecklist:any;
+  todocompleted:boolean;
 
   constructor() { }
 
   ngOnInit() {
-
-    this.todolist = ['Start this','Next item'];
-    this.completedlist = [];
-
- 
+    this.todoItem = '';
+    this.todolist = []; 
+    this.todocompleted = false;
   }
-  addToDo(tdlist){
-      console.log('val:',tdlist);
-      this.todolist.unshift(tdlist);
-      return false;
+  addToDo(event){
+    this.todochecklist = {
+        todoItem: this.todoItem,
+        completed:false
+    }
+      console.log('val:',this.todochecklist);
+      this.todolist.unshift(this.todochecklist);
+      this.todoItem = ''; //reset to blank
+      event.preventDefault();
+      // return false;
   }
 
 
