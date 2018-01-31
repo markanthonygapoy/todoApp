@@ -4,11 +4,28 @@
 # Description:
 # Angular5 todo app with Laravel & DingoAPI
 
-+-----------+------------------------+------+-----------------------------------------------+-----------+------------+----------+------------+
-| Host      | URI                    | Name | Action                                        | Protected | Version(s) | Scope(s) | Rate Limit |
-+-----------+------------------------+------+-----------------------------------------------+-----------+------------+----------+------------+
-| localhost | GET|HEAD /api/showlist |      | App\Http\Controllers\ApiController@showlist   | No        | v1         |          |            |
-| localhost | POST /api/addlist      |      | App\Http\Controllers\ApiController@addlist    | No        | v1         |          |            |
-| localhost | PUT /api/updatelist    |      | App\Http\Controllers\ApiController@updatelist | No        | v1         |          |            |
-| localhost | DELETE /api/deletelist |      | App\Http\Controllers\ApiController@deletelist | No        | v1         |          |            |
-+-----------+------------------------+------+-----------------------------------------------+-----------+------------+----------+------------+
+TO Access api, navigate to http://localhost:8000/[API PARAMETERS]
+
+API PARAMS:
+
+DESCRIPTION: Get ToDo List
+METHOD: GET
+PARAM: /api/showlist 
+http://localhost:8000/api/showlist
+
+DESCRIPTION: Add ToDo List Item
+METHOD: POST
+PARAM: /api/showlist 
+http://localhost:8000/api/addlist
+
+DESCRIPTION: Modify ToDo List Item
+METHOD: PUT
+PARAM: /api/showlist 
+http://localhost:8000/api/updatelist
+
+DESCRIPTION: Delete ToDo List Item
+METHOD: DELETE
+PARAM: /api/showlist 
+http://localhost:8000/api/deletelist
+
+
