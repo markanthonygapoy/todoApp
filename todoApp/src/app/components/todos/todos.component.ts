@@ -37,8 +37,6 @@ export class TodosComponent implements OnInit {
         completed:false
     }
     }
-  
-      console.log('val:',this.todochecklist);
       this.todolist.unshift(this.todochecklist); //directly push the data to arraylist without API validation due to time limitation
 
        // post data to Dingo API
