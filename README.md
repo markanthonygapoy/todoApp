@@ -4,7 +4,16 @@
 # Description:
 # Angular5 todo app with Laravel & DingoAPI
 
-TO Access api, navigate to http://localhost:8000/[API PARAMETERS]
+To Run APP
+
+1.) Git Clone git@github.com:markanthonygapoy/todoApp.git
+
+2.) Run Laravel / Dingo API
+
+> cd todo
+> php artisan serve
+
+To Access Dingo API, navigate to http://localhost:8000/[API PARAMETERS]
 
 API PARAMS:
 
@@ -27,5 +36,14 @@ DESCRIPTION: Delete ToDo List Item
 METHOD: DELETE
 PARAM: /api/showlist 
 http://localhost:8000/api/deletelist
+
+
+3.) Run Angular App
+
+> cd  todoApp
+todoApp > npm install
+todoApp > ng serve
+
+http://localhost:4200/
 
 
