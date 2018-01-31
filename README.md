@@ -10,7 +10,10 @@ To Run APP
 
 2.) Run Laravel / Dingo API
 
+Navigate to "todo"
 > cd todo
+
+Serve API
 > php artisan serve
 
 To Access Dingo API, navigate to http://localhost:8000/[API PARAMETERS]
@@ -40,9 +43,14 @@ http://localhost:8000/api/deletelist
 
 3.) Run Angular App
 
+Navigate to "todoApp" folder
 > cd  todoApp
-todoApp > npm install
-todoApp > ng serve
+
+Install dependencies
+> npm install
+
+Serve FrontEnd App
+> ng serve
 
 http://localhost:4200/
 
