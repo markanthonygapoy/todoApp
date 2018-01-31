@@ -4,30 +4,25 @@
         <form (submit)="addToDo($event)">
         <input  autofocus=""  [(ngModel)]="todoItem" (keyup.enter)="todoItem=''" class="textfield" name="todoItem">
         </form>
-<!-- 
-    <form (submit)="addToDo(tdItem.value);tdItem.value=''">
-      <div class="form-group">
-        <label for="todo">todo:</label>
-        <input autofocus=""  type="text" class="form-control" #tdItem>
-      </div>
-    </form> -->
-
 
 <div *ngIf="todolist.length > 0">
 <ul>
-  <li> <input type="checkbox" class="checkbox" [(ngModel)]="todocompleted" />Mark all as complete</li>
-    <li *ngFor="let todo of todolist; let i=index">
+  <li class="mark"> <input type="checkbox" class="checkbox" [(ngModel)]="todocompleted" (click)="markAll(todocompleted)" />Mark all as complete</li>
+    <li *ngFor="let todo of todolist; let i=index" (mouseenter)="mouseIn = true;" (mouseleave)="mouseIn = false;">
         <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
-      <span [ngClass]="{'checked': todo.completed}">{{ todo.todoItem }}</span>
-      <button (click)="removeToDo(i)" class="rmv">remove</button>
+      <span [ngClass]="{'checked': todo.completed}" >{{ todo.todoItem }}</span>
+      <button (click)="removeToDo(i)" [hidden]="!mouseIn" class="rmv">remove</button>
         </li>
 </ul>
 </div>
 
-
-
 <div *ngIf="todolist.length > 0">
-    <strong>{{todolist.length}}</strong> 
-    {{todolist.length == 1 ? 'item' : 'items'}} left
+    <strong>{{todolist.length - todoCompleted}}</strong> 
+    {{(todolist.length - todoCompleted) == 1 ? 'item' : 'items'}} left
   </div>
+  <span *ngFor="let todo of todolist  | slice:0:1; ">
+        <button (click)="clearCompleted()" *ngIf="todo.completed">Clear Completed Results</button>
+  </span>
+
 </div>
+
