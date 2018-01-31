@@ -19,12 +19,13 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
     this.todoItem = '';
-    this.todolist = []; 
+    this.todolist = [];
     this.todocompleted = false;
     this.checkItems();
     this.todoCompleted = 0;
   }
   addToDo(event){
+  
     if(this.todocompleted){
       this.todochecklist = {
         todoItem: this.todoItem,
@@ -38,7 +39,17 @@ export class TodosComponent implements OnInit {
     }
   
       console.log('val:',this.todochecklist);
-      this.todolist.unshift(this.todochecklist);
+      this.todolist.unshift(this.todochecklist); //directly push the data to arraylist without API validation due to time limitation
+
+       // post data to Dingo API
+      this.http.post('http://localhost:8000/api/addlist',this.todochecklist).subscribe(data => {
+        console.log('Response from Dingo API: ',data); //get response
+      //perform additional checking here, if data is successfully added, 
+      // proceed with pushing the item to the todochecklist
+
+      
+
+      });
       this.todoItem = ''; //reset to blank
       event.preventDefault();
   }
