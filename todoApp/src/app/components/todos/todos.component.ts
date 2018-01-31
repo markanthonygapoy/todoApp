@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class TodosComponent implements OnInit {
   todoCompleted:number;
   
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.todoItem = '';
