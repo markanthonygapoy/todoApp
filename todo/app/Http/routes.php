@@ -17,5 +17,8 @@ Route::get('/', function () {
 });
 
 $api->version('v1',function($api) {
-    $api->get('hello', 'App\Http\Controllers\ApiController@index');
+    $api->get('showlist', 'App\Http\Controllers\ApiController@showlist');
+    $api->post('addlist', 'App\Http\Controllers\ApiController@addlist');
+    $api->put('updatelist', 'App\Http\Controllers\ApiController@updatelist');
+    $api->delete('deletelist', 'App\Http\Controllers\ApiController@deletelist');
 });

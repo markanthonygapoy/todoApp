@@ -16,9 +16,23 @@ class ApiController extends Controller
      */
     public function index()
     {
-
         return "Todo Items List"; 
-        //
+    }
+    public function showlist()
+    {
+        return "Show ToDo Items"; 
+    }
+    public function addlist()
+    {
+        return "add items"; 
+    }
+    public function updatelist()
+    {
+        return "update ToDo Items"; 
+    }
+    public function deletelist()
+    {
+        return "Delete ToDo Items"; 
     }
 
     /**
