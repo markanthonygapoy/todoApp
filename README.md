@@ -67,8 +67,8 @@ Additional Notes:
  Pending Items:<br>
 
  <ol>
- <li>Update Items upon double click(ToDo Update)<li>
- <li>CORS operation in DingoAPI<li>
+ <li>Update Items upon double click(ToDo Update)</li>
+ <li>CORS operation in DingoAPI</li>
  </ol>
 
 
