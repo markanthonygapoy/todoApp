@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>ToDo List</h1>
+    <form (submit)="addToDo(tdlist.value)">
+      <div class="form-group">
+        <label for="todo">todo:</label>
+        <input type="text" class="form-control" #tdlist>
+      </div>
+    </form>
+</div>
+
+
+<ul>
+<li *ngFor="let todo of todolist; let x = index">
+  {{x + 1}}.) {{todo}}
+</li>
+</ul>
+
+<h3>{{completedlist.length}} of {{todolist.length}}</h3>
